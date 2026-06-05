@@ -1,3 +1,194 @@
-<Head>
-    <H1> Hola mundo</H1>
-</Head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Deportes - Sports Map</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      
+        :root {
+            --azul-acero: #011b30;
+            --dorado-oliva: #ff4c05;
+            --blanco-hueso: #ffffff;
+            --oscuro: #2C3E50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--blanco-hueso);
+            color: var(--oscuro);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Encabezado */
+        header {
+            width: 100%;
+            background-color: var(--azul-acero);
+            color: var(--blanco-hueso);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Contenedor del Catálogo */
+        .catalog-container {
+            max-width: 1200px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding-bottom: 40px;
+        }
+
+        /* Tarjeta de Deporte */
+        .card-deporte {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-top: 8px solid var(--azul-acero);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none; 
+            color: inherit;
+            overflow: hidden;
+        }
+
+        /* Efecto Hover aplicando el Dorado/Oliva */
+        .card-deporte:hover {
+            transform: translateY(-8px);
+            border-top-color: var(--dorado-oliva);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Contenedor de la Imagen */
+        .image-box {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #f0f0f0; /* Fondo gris claro en lo que carga la imagen */
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Evita que la imagen se distorsione */
+            transition: transform 0.3s ease;
+        }
+
+        /* Zoom sutil en la imagen al pasar el cursor */
+        .card-deporte:hover .image-box img {
+            transform: scale(1.05);
+        }
+
+        .card-deporte h2 {
+            font-size: 1.4rem;
+            color: var(--oscuro);
+            margin-bottom: 10px;
+        }
+
+        .card-deporte p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* Botón de la Tarjeta */
+        .btn-explorar {
+            background-color: var(--azul-acero);
+            color: var(--blanco-hueso);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .card-deporte:hover .btn-explorar {
+            background-color: var(--dorado-oliva);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Portal Deportivo</h1>
+        <p>Selecciona una disciplina para explorar sus estadios, rutas y promociones</p>
+    </header>
+
+    <main class="catalog-container">
+
+        <a href="Equipos.html" class="card-deporte">
+            <div class="image-box">
+                <img src="img/amfjpg.jpg" alt="Fútbol Americano">
+            </div>
+            <h2>Fútbol Americano</h2>
+            <p>Explora los colosos de la tacleada, consulta eventos y consigue las mejores promociones en bandejas de comida.</p>
+            <button class="btn-explorar">Explorar Estadios</button>
+        </a>
+
+        <a href="Equipos.html" class="card-deporte">
+            <div class="image-box">
+                <img src="img/Fut.jpg" alt="Fútbol">
+            </div>
+            <h2>Fútbol</h2>
+            <p>Visita templos históricos mundiales, encuentra rutas directas y aprovecha los tours exclusivos para aficionados.</p>
+            <button class="btn-explorar">Explorar Estadios</button>
+        </a>
+
+        <a href="Equipos.html" class="card-deporte">
+            <div class="image-box">
+                <img src="img/beis.jpg" alt="Béisbol">
+            </div>
+            <h2>Béisbol</h2>
+            <p>La magia del diamante te espera. Conoce las sedes icónicas y las promociones de souvenirs en días de partido.</p>
+            <button class="btn-explorar">Explorar Estadios</button>
+        </a>
+
+        <a href="Equipos.html" class="card-deporte">
+            <div class="image-box">
+                <img src="img/vo.jpg" alt="Vóleibol">
+            </div>
+            <h2>Vóleibol</h2>
+            <p>Sigue la emoción de la duela nacional e internacional. Genera tu ruta y obtén descuentos estudiantiles.</p>
+            <button class="btn-explorar">Explorar Estadios</button>
+        </a>
+
+    </main>
+
+</body>
+</html>

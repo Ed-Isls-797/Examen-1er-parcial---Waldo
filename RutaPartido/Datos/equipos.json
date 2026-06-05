@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "nombre": "Equipo de Futbol",
+        "ciudad": "Ciudad de Mexico",
+        "historia": "Fundado en 1900, el equipo de futbol ha sido uno de los más exitosos en la historia del deporte, con múltiples campeonatos nacionales e internacionales.",
+        "latitud": 19.4326,
+        "longitud": -99.1332,
+        "ventajas": ["Gran base de fanáticos", "Instalaciones modernas"],
+        "desventajas": ["Presión constante para ganar", "Lesiones frecuentes"]
+    },
+    {
+        "id": 2,
+        "nombre": "Equipo de Basquetbol",
+        "ciudad": "Guadalajara",
+        "historia": "El equipo de basquetbol fue fundado en 1950 y ha tenido un impacto significativo en la popularización del deporte en la región, con varios títulos nacionales.",
+        "latitud": 20.6597,
+        "longitud": -103.3496,
+        "ventajas": ["Jugadores talentosos", "Buena gestión"],
+        "desventajas": ["Falta de apoyo financiero", "Problemas de disciplina"]
+        
+    },
+    {
+        "id": 3,
+        "nombre": "Equipo de Futbol Americano",
+        "ciudad": "Monterrey",
+        "historia": "Fundado en 1980, el equipo de futbol americano ha sido un competidor constante en la liga, con varios campeonatos y una base de fanáticos leales.",
+        "latitud": 25.6866,
+        "longitud": -100.3161,
+        "ventajas": ["Estrategia sólida", "Entrenadores experimentados"],
+        "desventajas": ["Falta de profundidad en el roster", "Problemas de lesiones"]
+    },
+    {
+        "id": 4,
+        "nombre": "Equipo de Beisbol",
+        "ciudad": "Puebla",
+        "historia": "El equipo de beisbol fue fundado en 1970 y ha sido un pilar en la comunidad local, con varios campeonatos y una base de fanáticos apasionados.",
+        "latitud": 19.0413,
+        "longitud": -98.2062,
+        "ventajas": ["Jugadores jóvenes prometedores", "Buena química de equipo"],
+        "desventajas": ["Falta de experiencia en momentos clave", "Problemas de consistencia"]
+    },{
+        "id": 5,
+        "nombre": "Equipo de Hockey",
+        "ciudad": "Tijuana",
+        "historia": "Fundado en 1990, el equipo de hockey ha sido un competidor constante en la liga, con varios campeonatos y una base de fanáticos leales.",
+        "latitud": 32.5149,
+        "longitud": -117.0382,
+        "ventajas": ["Jugadores talentosos", "Buena gestión"],
+        "desventajas": ["Falta de apoyo financiero", "Problemas de disciplina"]
+    }
+
+]

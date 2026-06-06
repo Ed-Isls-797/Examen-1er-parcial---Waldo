@@ -1,0 +1,122 @@
+[
+  {
+    "id_equipo": 1,
+    "equipo": "Philadelphia Eagles",
+    "promocion": "Vuela Alto con el Menú Eagles",
+    "descripcion": "Por la compra de un combo familiar Pepsi, participa en el sorteo de un jersey Nike firmado por Jalen Hurts.",
+    "patrocinador_asociado": "Pepsi",
+    "descuento_beneficio": "Sorteo exclusivo"
+  },
+  {
+    "id_equipo": 2,
+    "equipo": "Buffalo Bills",
+    "promocion": "Soporta el Clima al Estilo Bills",
+    "descripcion": "20% de descuento en la colección de gorros para frío extremo New Era usando el código BILLSMAFIA.",
+    "patrocinador_asociado": "New Era",
+    "descuento_beneficio": "20% de descuento"
+  },
+  {
+    "id_equipo": 3,
+    "equipo": "Cleveland Browns",
+    "promocion": "Energía Terrestre con los Browns",
+    "descripcion": "Regístrate en el programa de lealtad de FirstEnergy y obtén un boleto digital gratis para el próximo juego en Cleveland.",
+    "patrocinador_asociado": "FirstEnergy",
+    "descuento_beneficio": "Boleto digital gratis"
+  },
+  {
+    "id_equipo": 4,
+    "equipo": "Jacksonville Jaguars",
+    "promocion": "Juventud Jaguar",
+    "descripcion": "En la compra de cualquier accesorio en Fanatics, recibe un póster de Trevor Lawrence de edición limitada.",
+    "patrocinador_asociado": "Fanatics",
+    "descuento_beneficio": "Regalo por compra"
+  },
+  {
+    "id_equipo": 5,
+    "equipo": "New England Patriots",
+    "promocion": "Raza de Campeones",
+    "descripcion": "Presenta tu abono de temporada en tiendas Gillette y obtén un 15% de descuento en productos de cuidado personal.",
+    "patrocinador_asociado": "Gillette",
+    "descuento_beneficio": "15% de descuento"
+  },
+  {
+    "id_equipo": 6,
+    "equipo": "Cruz Azul",
+    "promocion": "Construyendo la Pasión Celeste",
+    "descripcion": "Descuentos especiales en Cemento Cruz Azul para distribuidores autorizados durante los días de partido de La Máquina.",
+    "patrocinador_asociado": "Cemento Cruz Azul",
+    "descuento_beneficio": "Precio de distribuidor especial"
+  },
+  {
+    "id_equipo": 7,
+    "equipo": "Chivas Guadalajara",
+    "promocion": "Identidad y Salud Rebaño",
+    "descripcion": "Compra un paquete de suplementos Omnilife seleccionados y llévate gratis una bufanda oficial Puma de las Chivas.",
+    "patrocinador_asociado": "Omnilife",
+    "descuento_beneficio": "Bufanda oficial gratis"
+  },
+  {
+    "id_equipo": 8,
+    "equipo": "Pachuca",
+    "promocion": "Conectados con el Talento Tuzo",
+    "descripcion": "Contrata o renueva tu plan Telcel y recibe megas ilimitados los días que juegue el Pachuca, además de acceso a contenido de la cantera.",
+    "patrocinador_asociado": "Telcel",
+    "descuento_beneficio": "Megas ilimitados en días de juego"
+  },
+  {
+    "id_equipo": 9,
+    "equipo": "Querétaro",
+    "promocion": "El Motor de los Gallos",
+    "descripcion": "Agenda tu prueba de manejo en MG Motor Querétaro y participa para ganar pases VIP dobles en el palco Adidas del estadio.",
+    "patrocinador_asociado": "MG Motor",
+    "descuento_beneficio": "Pases VIP dobles"
+  },
+  {
+    "id_equipo": 10,
+    "equipo": "Tigres UANL",
+    "promocion": "Inversión de Perfil Tigre",
+    "descripcion": "Abre tu cuenta en Bitso, deposita tu primer balance y recibe un código de descuento para el nuevo jersey Adidas.",
+    "patrocinador_asociado": "Bitso",
+    "descuento_beneficio": "Bono de descuento para jersey"
+  },
+  {
+    "id_equipo": 11,
+    "equipo": "Los Angeles Lakers",
+    "promocion": "Cena de Estrellas en LA",
+    "descripcion": "Disfruta el sabor coreano con un 10% de descuento en Bibigo ordenando el 'LeBron MVP Box' durante las transmisiones de los Lakers.",
+    "patrocinador_asociado": "Bibigo",
+    "descuento_beneficio": "10% de descuento en menú temático"
+  },
+  {
+    "id_equipo": 12,
+    "equipo": "Chicago Bulls",
+    "promocion": "Enfoca la Leyenda",
+    "descripcion": "Compra tus lentes de sol en Zenni con el código BULLS90 y llévate un estuche conmemorativo de la era de los 6 campeonatos.",
+    "patrocinador_asociado": "Zenni",
+    "descuento_beneficio": "Estuche histórico de regalo"
+  },
+  {
+    "id_equipo": 13,
+    "equipo": "Miami Heat",
+    "promocion": "Cultura y Ritmo de Miami",
+    "descripcion": "Celebra la victoria del Heat en los establecimientos participantes de Bacardi con un cóctel de cortesía mostrando tu boleto del juego.",
+    "patrocinador_asociado": "Bacardi",
+    "descuento_beneficio": "Cóctel de cortesía pospartido"
+  },
+  {
+    "id_equipo": 14,
+    "equipo": "Oklahoma City Thunder",
+    "promocion": "El Futuro es Hoy",
+    "descripcion": "Carga combustible en estaciones Love's los días de partido del Thunder y duplica tus puntos de recompensa en la app.",
+    "patrocinador_asociado": "Love's",
+    "descuento_beneficio": "Doble puntaje de recompensa"
+  },
+  {
+    "id_equipo": 15,
+    "equipo": "Phoenix Suns",
+    "promocion": "Ofensiva Brillante",
+    "descripcion": "Paga tus boletos para los Suns a través de PayPal y obtén un reembolso de $15 USD para consumir dentro de la arena.",
+    "patrocinador_asociado": "PayPal",
+    "descuento_beneficio": "$15 USD de crédito para snacks/tienda"
+  }
+]

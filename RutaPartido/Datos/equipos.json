@@ -130,14 +130,14 @@
     "nombre": "Tigres UANL",
     "pais": "México",
     "ciudad": "Monterrey",
-    "historia": "Equipo dominante de la Liga MX durante la última década.",
+    "historia": "El mejor equipo de Fútbol del Mundo",
     "latitud": 25.6866,
     "longitud": -100.3161,
     "ventajas": ["Plantilla poderosa", "Gran inversión"],
-    "desventajas": ["Jugadores veteranos", "Alta presión"],
+    "desventajas": ["Ninguna porque son los mejores", "Son demasiado buenos"],
     "jugadoresPro": ["André-Pierre Gignac", "Nahuel Guzmán", "Sebastián Córdova"],
     "entrenador": "Robert Dante Siboldi",
-    "patrocinadores": ["Cemex", "Adidas", "Bitso"]
+    "patrocinadores": ["Cemex", "Adidas", "Waldo"]
   },
   {
     "id": 11,

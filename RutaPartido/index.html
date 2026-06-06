@@ -107,21 +107,10 @@
             transition: transform 0.3s ease;
         }
 
-        .card-deporte:hover .image-box img {
-            transform: scale(1.05);
-        }
-
         .card-deporte h2 {
             font-size: 1.4rem;
             color: var(--oscuro);
             margin-bottom: 10px;
-        }
-
-        .card-deporte p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.4;
         }
 
         .btn-explorar {
@@ -133,12 +122,7 @@
             font-size: 0.9rem;
             font-weight: bold;
             width: 100%;
-            transition: background-color 0.2s;
             cursor: pointer;
-        }
-
-        .card-deporte:hover .btn-explorar {
-            background-color: var(--dorado-oliva);
         }
 
         .main-map-section {
@@ -192,53 +176,40 @@
             color: var(--dorado-oliva);
         }
 
-        /* Selección de Deporte */
         select {
             width: 100%;
             padding: 10px;
             border-radius: 6px;
             border: 1px solid var(--borde);
             font-size: 0.9rem;
-            margin-top: 10px;
             outline: none;
-        }
-
-        .stadium-list {
-            list-style: none;
-            margin-top: 10px;
-        }
-
-        .stadium-item {
-            padding: 10px;
-            background: #fff;
-            border: 1px solid var(--borde);
-            border-radius: 6px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-
-        .stadium-item:hover {
-            background-color: var(--azul-acero);
-            color: #fff;
         }
 
         .btn-action {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border-radius: 6px;
             border: none;
             background-color: var(--azul-acero);
             color: #fff;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             transition: background 0.2s;
         }
 
         .btn-action:hover {
             background-color: var(--dorado-oliva);
+        }
+
+        .btn-action:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
         }
 
         .share-container {
@@ -261,17 +232,14 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            transition: opacity 0.2s;
         }
 
         .btn-share.whatsapp { background-color: #25D366; }
         .btn-share.facebook { background-color: #1877F2; }
-        .btn-share:hover { opacity: 0.9; }
 
         .map-container {
             flex: 1;
             background-color: #e5e3df;
-            position: relative;
         }
 
         #map {
@@ -280,17 +248,9 @@
         }
 
         @media (max-width: 768px) {
-            .main-map-section {
-                flex-direction: column;
-                height: auto;
-            }
-            .sidebar {
-                width: 100%;
-                height: 450px;
-            }
-            .map-container {
-                height: 400px;
-            }
+            .main-map-section { flex-direction: column; height: auto; }
+            .sidebar { width: 100%; height: auto; }
+            .map-container { height: 400px; }
         }
     </style>
 </head>
@@ -303,32 +263,24 @@
     </header>
 
     <main class="catalog-container">
-        <!-- Tarjetas de deportes sin cambios estructurales, solo enlaces -->
-        <a href="#" class="card-deporte">
-            <div class="image-box">
-                <img src="img/amfjpg.jpg" alt="Fútbol Americano">
-            </div>
+        <div class="card-deporte" data-sport="americano">
+            <div class="image-box"><img src="img/amfjpg.jpg" alt="Americano"></div>
             <h2>Fútbol Americano</h2>
             <button class="btn-explorar">Explorar Estadios</button>
-        </a>
-        <a href="#" class="card-deporte">
-            <div class="image-box">
-                <img src="img/Fut.jpg" alt="Fútbol">
-            </div>
+        </div>
+        <div class="card-deporte" data-sport="futbol">
+            <div class="image-box"><img src="img/Fut.jpg" alt="Fútbol"></div>
             <h2>Fútbol</h2>
             <button class="btn-explorar">Explorar Estadios</button>
-        </a>
-        <a href="#" class="card-deporte">
-            <div class="image-box">
-                <img src="img/basquet.jpg" alt="Básquetbol">
-            </div>
+        </div>
+        <div class="card-deporte" data-sport="basquet">
+            <div class="image-box"><img src="img/basquet.jpg" alt="Básquetbol"></div>
             <h2>Básquetbol</h2>
             <button class="btn-explorar">Explorar Estadios</button>
-        </a>
+        </div>
     </main>
 
     <section class="main-map-section">
-        
         <aside class="sidebar">
             <h3>Selección de Estadios</h3>
             
@@ -344,69 +296,49 @@
 
             <div class="info-block">
                 <h4><i class="fa-solid fa-stadium"></i> Estadios disponibles</h4>
-                <ul class="stadium-list" id="stadium-list">
-                    <li class="stadium-item">Elige un deporte para ver los estadios...</li>
-                </ul>
+                <select id="stadium-selector" disabled>
+                    <option value="">Selecciona primero un deporte...</option>
+                </select>
             </div>
-            <div class="info-block" id="promo-block">
-                <h4><i class="fa-solid fa-tag"></i> Promociones del Club</h4>
-                <p id="promo-details">Las ofertas aparecerán aquí al elegir un equipo.</p>
-            </div>
+
             <button class="btn-action" id="btn-my-location">
                 <i class="fa-solid fa-location-crosshairs"></i> Mostrar mi ubicación
             </button>
 
-            <button class="btn-action" id="btn-generate-route" >
-                <i class="fa-solid diamond"></i> Generar ruta
-            </button> <!-- Botón oculto por ahora hasta que se implementen los datos -->
+            <button class="btn-action" id="btn-generate-route" disabled>
+                <i class="fa-solid fa-route"></i> Generar ruta
+            </button>
+
+            <div class="info-block" id="stadium-info-block" style="display: none;">
+                <h4><i class="fa-solid fa-circle-info"></i> Detalles del Estadio</h4>
+                <p id="stadium-details"></p>
+            </div>
+
+            <div class="info-block" id="promo-info-block" style="display: none;">
+                <h4><i class="fa-solid fa-tag"></i> Promociones</h4>
+                <p id="promo-details"></p>
+            </div>
 
             <div class="share-container">
-                <button class="btn-share whatsapp" id="share-ws">
-                    <i class="fa-brands fa-whatsapp"></i> Compartir
-                </button>
-                <button class="btn-share facebook" id="share-fb">
-                    <i class="fa-brands fa-facebook-f"></i> Compartir
-                </button>
+                <button class="btn-share whatsapp" id="share-ws"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+                <button class="btn-share facebook" id="share-fb"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
             </div>
         </aside>
 
         <div class="map-container">
             <div id="map"></div>
         </div>
-
     </section>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
     
-    <script>
-        const map = L.map('map').setView([19.4326, -99.1332], 12); 
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        let userMarker;
-
-        document.getElementById('btn-my-location').addEventListener('click', function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const lat = position.coords.latitude;
-                    const lng = position.coords.longitude;
-                    if (userMarker) {
-                        userMarker.setLatLng([lat, lng]);
-                    } else {
-                        userMarker = L.marker([lat, lng]).addTo(map)
-                            .bindPopup("¡Estás aquí!").openPopup();
-                    }
-                    map.setView([lat, lng], 15);
-                }, function(error) {
-                    alert("Error al obtener la ubicación: " + error.message);
-                });
-            } else {
-                alert("Tu navegador no soporta geolocalización.");
-            }
-        });
-    </script>
+    <script src="Clases/Equipo.js"></script>
+    <script src="Clases/EquiposAmericano.js"></script>
+    <script src="Clases/EquiposFutbol.js"></script>
+    <script src="Clases/EquiposBaskquet.js"></script>
+    <script src="Clases/Promocion.js"></script>
+    
+    <script src="app.js"></script>
 </body>
 </html>
